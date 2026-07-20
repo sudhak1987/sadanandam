@@ -2,30 +2,57 @@ const loader = document.getElementById('loader');
 window.addEventListener('load', ()=> setTimeout(()=> loader.classList.add('hide'), 260));
 
 const header = document.getElementById('header');
-window.addEventListener('scroll', ()=> header.classList.toggle('scrolled', window.scrollY > 8));
+const mobileDonate = document.querySelector('.mobile-donate');
+let scrollTicking = false;
+window.addEventListener('scroll', ()=>{
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(()=>{
+    header.classList.toggle('scrolled', window.scrollY > 8);
+    if (mobileDonate) mobileDonate.classList.toggle('hide', window.scrollY > window.innerHeight / 2);
+    scrollTicking = false;
+  });
+});
 
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
+function closeMobileNav(){
+  nav.classList.remove('open', 'drilled');
+  nav.querySelectorAll('.nav-item.open').forEach(o => o.classList.remove('open'));
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
 if (hamburger){
   hamburger.addEventListener('click', ()=>{
-    nav.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+    const isOpen = nav.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 }
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> nav.classList.remove('open')));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
 
 nav.querySelectorAll('.nav-item').forEach(item => {
   const link = item.querySelector('.nav-link');
   if (!link) return;
   link.addEventListener('click', ()=>{
     const isOpen = item.classList.contains('open');
-    nav.querySelectorAll('.nav-item.open').forEach(o => { if (o !== item) o.classList.remove('open'); });
-    item.classList.toggle('open', !isOpen);
+    nav.querySelectorAll('.nav-item.open').forEach(o => o.classList.remove('open'));
+    if (isOpen){
+      nav.classList.remove('drilled');
+    } else {
+      item.classList.add('open');
+      nav.classList.add('drilled');
+    }
     link.setAttribute('aria-expanded', String(!isOpen));
   });
 });
 document.addEventListener('click', e => {
-  if (!e.target.closest('.nav-item')) nav.querySelectorAll('.nav-item.open').forEach(o => o.classList.remove('open'));
+  if (!e.target.closest('.nav-item')){
+    nav.querySelectorAll('.nav-item.open').forEach(o => o.classList.remove('open'));
+    nav.classList.remove('drilled');
+  }
 });
 
 const heroCarousel = document.getElementById('heroCarousel');
