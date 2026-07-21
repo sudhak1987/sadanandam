@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#073f3c">
+  <title>Full Calendar | Sadanandam Spiritual &amp; Educational Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="loader" id="loader"><span>❈</span></div>
+
+<div class="page-shell">
+  <div class="utility desktop-only">
+    <div class="shell utility-row">
+      <div class="utility-left">
+        <span><i class="fa-solid fa-location-dot"></i> Welcome to Sadanandam</span>
+        <span><i class="fa-solid fa-envelope"></i> info@sadanandam.org</span>
+        <span><i class="fa-solid fa-phone"></i> +91 12345 67890</span>
+      </div>
+      <div class="utility-right">
+        <span><i class="fa-regular fa-clock"></i> Daily Satsang 6:00 AM</span>
+        <span>English <i class="fa-solid fa-chevron-down"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="shell header-row">
+      <a class="logo" href="index.html">
+        <span class="lotus">❈</span>
+        <span><b>SADANANDAM</b><small>SPIRITUAL & EDUCATIONAL TRUST</small></span>
+      </a>
+      <nav id="nav">
+        <a href="about.html">About Us</a>
+
+        <div class="nav-item">
+          <button class="nav-link">Events <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="dropdown-panel">
+            <a href="index.html#events"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</a>
+            <a href="past-events.html"><i class="fa-solid fa-clock-rotate-left"></i> Past Events</a>
+            <a href="index.html#events"><i class="fa-solid fa-tower-broadcast"></i> Live Satsang</a>
+            <a href="full-calendar.html"><i class="fa-regular fa-calendar"></i> Full Calendar</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-link">Institutions <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="mega-panel">
+            <div class="mega-col">
+              <h4>Education</h4>
+              <a href="index.html#institutions"><i class="fa-solid fa-book-open"></i> Gurukul</a>
+              <a href="index.html#institutions"><i class="fa-solid fa-graduation-cap"></i> College</a>
+            </div>
+            <div class="mega-col">
+              <h4>Faith &amp; Skill</h4>
+              <a href="index.html#institutions"><i class="fa-solid fa-place-of-worship"></i> Ashram</a>
+              <a href="index.html#institutions"><i class="fa-solid fa-building-columns"></i> Institute</a>
+            </div>
+            <div class="mega-col mega-feature">
+              <img src="assets/saint.webp" alt="Our Institutions">
+              <b>One Vision, Four Pillars</b>
+              <a href="index.html#institutions">Explore All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item nav-item--full">
+          <button class="nav-link">Media <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="full-panel">
+            <div class="shell full-panel-inner">
+              <a class="full-link" href="index.html#gallery"><i class="fa-solid fa-images"></i><span>Photo Gallery</span></a>
+              <a class="full-link" href="index.html#media"><i class="fa-solid fa-video"></i><span>Video Library</span></a>
+              <a class="full-link" href="#"><i class="fa-solid fa-newspaper"></i><span>Press &amp; News</span></a>
+              <a class="full-link" href="#"><i class="fa-solid fa-podcast"></i><span>Satsang Audio</span></a>
+              <a class="full-link" href="#"><i class="fa-solid fa-book"></i><span>Publications</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-link">Get Involved <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="cards-panel">
+            <a class="menu-card" href="index.html#donation"><span class="menu-card-icon"><i class="fa-solid fa-hand-holding-heart"></i></span><b>Donate</b><p>Support our causes</p></a>
+            <a class="menu-card" href="#"><span class="menu-card-icon"><i class="fa-solid fa-hands-holding-child"></i></span><b>Volunteer</b><p>Give your time &amp; skill</p></a>
+            <a class="menu-card" href="index.html#events"><span class="menu-card-icon"><i class="fa-solid fa-calendar-check"></i></span><b>Attend</b><p>Join upcoming events</p></a>
+          </div>
+        </div>
+
+        <a href="index.html#footer">Contact</a>
+      </nav>
+      <a class="top-donate desktop-only" href="index.html#donation"><i class="fa-regular fa-heart"></i> Donate Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="about-banner shell reveal">
+      <span>FULL CALENDAR</span>
+      <h1>Maharaj Ji's Annual Events Calendar</h1>
+      <p>Every satsang, festival, service drive and celebration on Sadanandam's calendar this year &mdash; in one place, month by month.</p>
+    </section>
+
+    <div class="content shell">
+      <div class="cal-year-bar"><i class="fa-solid fa-calendar-day"></i><span>2026</span></div>
+      <nav class="cal-jump" aria-label="Jump to month">
+        <a href="#cal-jan">Jan</a><a href="#cal-feb">Feb</a><a href="#cal-mar">Mar</a><a href="#cal-apr">Apr</a>
+        <a href="#cal-may">May</a><a href="#cal-jun">Jun</a><a href="#cal-jul">Jul</a><a href="#cal-aug">Aug</a>
+        <a href="#cal-sep">Sep</a><a href="#cal-oct">Oct</a><a href="#cal-nov">Nov</a><a href="#cal-dec">Dec</a>
+      </nav>
+
+      <section class="cal-month reveal" id="cal-jan">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>January</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>15</b><small>JAN</small></div>
+            <div class="cal-info"><h4>Sadanandam Foundation Day</h4><p>Ashram Anniversary Celebration</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 7:30 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>26</b><small>JAN</small></div>
+            <div class="cal-info"><h4>Republic Day Seva</h4><p>Community Service &amp; Blanket Drive</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Anand Nagar</span>
+              <span><i class="fa-regular fa-clock"></i> 8:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-feb">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>February</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>02</b><small>FEB</small></div>
+            <div class="cal-info"><h4>Winter Health Camp</h4><p>Free Medical Consultations &amp; Medicines</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Campus</span>
+              <span><i class="fa-regular fa-clock"></i> 9:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>14</b><small>FEB</small></div>
+            <div class="cal-info"><h4>Saraswati Puja</h4><p>Educational Blessings Ceremony</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Gurukul</span>
+              <span><i class="fa-regular fa-clock"></i> 10:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>26</b><small>FEB</small></div>
+            <div class="cal-info"><h4>Maha Shivratri Satsang</h4><p>Night-long Devotional Chanting</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-mar">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>March</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>10</b><small>MAR</small></div>
+            <div class="cal-info"><h4>Annual Gurukul Convocation</h4><p>Graduation &amp; Merit Award Ceremony</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam College</span>
+              <span><i class="fa-regular fa-clock"></i> 11:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>14</b><small>MAR</small></div>
+            <div class="cal-info"><h4>Holi Milan Samagam</h4><p>Festival of Colors Gathering</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-apr">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>April</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>06</b><small>APR</small></div>
+            <div class="cal-info"><h4>Ram Navami Satsang</h4><p>Devotional Bhajans &amp; Discourse</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 6:30 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>20</b><small>APR</small></div>
+            <div class="cal-info"><h4>Annual Health Checkup Camp</h4><p>Free Diagnostics for Senior Citizens</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag cal-tag--past">Completed</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Campus</span>
+              <span><i class="fa-regular fa-clock"></i> 9:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-may">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>May</h3><small>1 Event</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>24</b><small>MAY</small></div>
+            <div class="cal-info"><h4>Guru Purnima Celebration</h4><p>Satsang, Discourses &amp; Blessings</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 7:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-jun">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>June</h3><small>3 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>05</b><small>JUN</small></div>
+            <div class="cal-info"><h4>World Environment Day Plantation</h4><p>Tree Plantation &amp; Awareness Drive</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Institute</span>
+              <span><i class="fa-regular fa-clock"></i> 7:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>08</b><small>JUN</small></div>
+            <div class="cal-info"><h4>Youth Leadership Retreat</h4><p>Inspiration, Skills &amp; Service</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Institute</span>
+              <span><i class="fa-regular fa-clock"></i> 10:30 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>15</b><small>JUN</small></div>
+            <div class="cal-info"><h4>Health &amp; Wellness Camp</h4><p>Free Camp &amp; Consultations</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Campus</span>
+              <span><i class="fa-regular fa-clock"></i> 9:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-jul">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>July</h3><small>1 Event</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>10</b><small>JUL</small></div>
+            <div class="cal-info"><h4>Chaturmas Satsang Begins</h4><p>Four-Month Devotional Observance</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-aug">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>August</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>15</b><small>AUG</small></div>
+            <div class="cal-info"><h4>Independence Day Seva</h4><p>Flag Hoisting &amp; Community Service</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Anand Nagar</span>
+              <span><i class="fa-regular fa-clock"></i> 8:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>26</b><small>AUG</small></div>
+            <div class="cal-info"><h4>Krishna Janmashtami Celebration</h4><p>Midnight Aarti &amp; Devotional Singing</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-sep">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>September</h3><small>1 Event</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>05</b><small>SEP</small></div>
+            <div class="cal-info"><h4>Ganesh Chaturthi Utsav</h4><p>Idol Installation &amp; Evening Aarti</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-oct">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>October</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>12</b><small>OCT</small></div>
+            <div class="cal-info"><h4>Navratri Satsang &amp; Garba</h4><p>Nine Nights of Devotion &amp; Dance</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Campus</span>
+              <span><i class="fa-regular fa-clock"></i> 7:00 PM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>20</b><small>OCT</small></div>
+            <div class="cal-info"><h4>Diwali Mela &amp; Charity Drive</h4><p>Festival Fair Supporting Local Artisans</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-nov">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>November</h3><small>1 Event</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>08</b><small>NOV</small></div>
+            <div class="cal-info"><h4>Annual Day &amp; Prize Distribution</h4><p>Celebrating Academic &amp; Cultural Achievers</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam College</span>
+              <span><i class="fa-regular fa-clock"></i> 10:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cal-month reveal" id="cal-dec">
+        <div class="cal-month-head"><i class="fa-regular fa-calendar"></i><h3>December</h3><small>2 Events</small></div>
+        <div class="cal-list">
+          <div class="cal-row">
+            <div class="cal-date"><b>15</b><small>DEC</small></div>
+            <div class="cal-info"><h4>Winter Blanket Distribution Drive</h4><p>Warm Clothing for the Needy</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Anand Nagar</span>
+              <span><i class="fa-regular fa-clock"></i> 8:00 AM</span>
+            </div>
+          </div>
+          <div class="cal-row">
+            <div class="cal-date"><b>31</b><small>DEC</small></div>
+            <div class="cal-info"><h4>Year-End Satsang &amp; Thanksgiving</h4><p>Reflection, Gratitude &amp; Blessings</p></div>
+            <div class="cal-meta">
+              <span class="cal-tag">Upcoming</span>
+              <span><i class="fa-solid fa-location-dot"></i> Sadanandam Ashram</span>
+              <span><i class="fa-regular fa-clock"></i> 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-cta reveal">
+        <h2>Never Miss a Satsang</h2>
+        <p>Subscribe for reminders on every upcoming event, or reach out to plan your visit to an event near you.</p>
+        <div class="hero-actions">
+          <a class="primary" href="index.html#donation">Donate Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="secondary" href="index.html#events">View Upcoming Events <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer desktop-only" id="footer">
+    <div class="shell footer-grid">
+      <div class="footer-logo">
+        <div class="logo"><span class="lotus">❈</span><span><b>SADANANDAM</b><small>SPIRITUAL & EDUCATIONAL TRUST</small></span></div>
+        <p>Inspiring lives, illuminating futures.<br>Serving humanity.</p>
+        <div class="social"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-whatsapp"></i></div>
+      </div>
+      <div><h4>Quick Links</h4><a href="about.html">About Us</a><a href="index.html#events">Events</a><a href="index.html#media">Media</a><a href="index.html#gallery">Gallery</a></div>
+      <div><h4>Institutions</h4><a href="#">Ashram</a><a href="#">Gurukul</a><a href="#">College</a><a href="#">Institute</a></div>
+      <div><h4>Resources</h4><a href="#">Publications</a><a href="#">Satsang Videos</a><a href="#">Donation</a><a href="#">FAQs</a></div>
+      <div><h4>Contact Us</h4><a href="#">Sadanandam Ashram</a><a href="#">Anand Nagar, India - 247001</a><a href="#">+91 12345 67890</a><a href="#">info@sadanandam.org</a></div>
+      <div class="subscribe"><h4>Stay Connected</h4><p>Subscribe to our newsletter</p><form><input placeholder="Your email address" type="email"><button type="submit">Subscribe</button></form></div>
+    </div>
+    <div class="shell copyright"><span>© 2026 Sadanandam Spiritual & Educational Trust. All Rights Reserved.</span><span>Privacy Policy | Terms of Use</span></div>
+  </footer>
+</div>
+
+<a class="mobile-donate mobile-only" href="index.html#donation"><i class="fa-regular fa-heart"></i><span>Donate Now</span><i class="fa-solid fa-arrow-right"></i></a>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+    <div class="video-embed">
+      <iframe id="modalVideoFrame" src="" title="The Path to Inner Peace" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <h3>The Path to Inner Peace</h3>
+    <p>Watch Swami Sadanandam Ji Maharaj's recorded message on the path to inner peace.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

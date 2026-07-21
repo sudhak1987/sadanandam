@@ -87,15 +87,17 @@ document.querySelectorAll('.reveal').forEach(el=> observer.observe(el));
 
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
-const video = modal.querySelector('video');
+const videoFrame = modal.querySelector('#modalVideoFrame');
+const YOUTUBE_VIDEO_ID = 'U3qcWAJgZIE';
 document.querySelectorAll('.open-video').forEach(btn => btn.addEventListener('click', ()=>{
+  videoFrame.src = `https://www.youtube.com/embed/${btn.dataset.yt || YOUTUBE_VIDEO_ID}?autoplay=1&rel=0`;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }));
 function shutModal(){
   modal.classList.remove('open');
   document.body.style.overflow = '';
-  video.pause();
+  videoFrame.src = '';
 }
 closeModal.addEventListener('click', shutModal);
 modal.addEventListener('click', e => { if(e.target === modal) shutModal(); });

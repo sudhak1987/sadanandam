@@ -36,15 +36,15 @@
         <span><b>SADANANDAM</b><small>SPIRITUAL & EDUCATIONAL TRUST</small></span>
       </a>
       <nav id="nav">
-        <a href="#about">About Us</a>
+        <a href="about.html">About Us</a>
 
         <div class="nav-item">
           <button class="nav-link">Events <i class="fa-solid fa-chevron-down"></i></button>
           <div class="dropdown-panel">
             <a href="#events"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</a>
-            <a href="#events"><i class="fa-solid fa-clock-rotate-left"></i> Past Events</a>
+            <a href="past-events.html"><i class="fa-solid fa-clock-rotate-left"></i> Past Events</a>
             <a href="#events"><i class="fa-solid fa-tower-broadcast"></i> Live Satsang</a>
-            <a href="#events"><i class="fa-regular fa-calendar"></i> Full Calendar</a>
+            <a href="full-calendar.html"><i class="fa-regular fa-calendar"></i> Full Calendar</a>
           </div>
         </div>
 
@@ -188,13 +188,13 @@
         <small>— Swami Sadanandam Ji Maharaj</small>
       </div>
       <div class="about-mark">❈</div>
-      <a class="about-button" href="#">Know More About Maharaj Ji</a>
+      <a class="about-button" href="about.html">Know More About Maharaj Ji</a>
     </section>
 
     <div class="content shell">
       <section class="featured" id="media">
         <div class="label">FEATURED VIDEO</div>
-        <button class="video-card open-video reveal">
+        <button class="video-card open-video reveal" data-yt="U3qcWAJgZIE">
           <img src="assets/saint.webp" alt="Featured discourse">
           <span class="shade"></span>
           <span class="play"><i class="fa-solid fa-play"></i></span>
@@ -315,9 +315,9 @@
       <section class="gallery">
         <div class="row-title"><span>PHOTO GALLERY</span><a href="#">View all Photos <i class="fa-solid fa-arrow-right"></i></a></div>
         <div class="gallery-grid">
-          <a class="g-item g-featured" href="#"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85" alt="Gathering"></a>
-          <a class="g-item" href="#"><img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=500&q=80" alt="Celebration"></a>
-          <a class="g-item" href="#"><img src="assets/saint.webp" alt="Saint"></a>
+          <a class="g-item g-featured" href="#"><img src="https://images.unsplash.com/photo-1712733900711-d0b929d0d7cc?auto=format&fit=crop&w=900&q=85" alt="Devotees Gathering at the Temple"></a>
+          <a class="g-item" href="#"><img src="https://images.unsplash.com/photo-1677211352662-30e7775c7ce8?auto=format&fit=crop&w=500&q=80" alt="Temple Celebration"></a>
+          <a class="g-item" href="#"><img class="g-face" src="assets/saint.webp" alt="Saint"></a>
           <a class="g-item" href="#"><img src="https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?auto=format&fit=crop&w=500&q=80" alt="Ceremony"></a>
           <a class="g-item g-more" href="#"><img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=500&q=80" alt="Students"><span>+120 Photos</span></a>
         </div>
@@ -342,7 +342,7 @@
         <p>Inspiring lives, illuminating futures.<br>Serving humanity.</p>
         <div class="social"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-whatsapp"></i></div>
       </div>
-      <div><h4>Quick Links</h4><a href="#about">About Us</a><a href="#events">Events</a><a href="#media">Media</a><a href="#">Gallery</a></div>
+      <div><h4>Quick Links</h4><a href="about.html">About Us</a><a href="#events">Events</a><a href="#media">Media</a><a href="#">Gallery</a></div>
       <div><h4>Institutions</h4><a href="#">Ashram</a><a href="#">Gurukul</a><a href="#">College</a><a href="#">Institute</a></div>
       <div><h4>Resources</h4><a href="#">Publications</a><a href="#">Satsang Videos</a><a href="#">Donation</a><a href="#">FAQs</a></div>
       <div><h4>Contact Us</h4><a href="#">Sadanandam Ashram</a><a href="#">Anand Nagar, India - 247001</a><a href="#">+91 12345 67890</a><a href="#">info@sadanandam.org</a></div>
@@ -357,11 +357,11 @@
 <div class="modal" id="modal">
   <div class="modal-box">
     <button id="closeModal"><i class="fa-solid fa-xmark"></i></button>
-    <video controls preload="metadata" poster="assets/saint.webp">
-      <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-    </video>
+    <div class="video-embed">
+      <iframe id="modalVideoFrame" src="" title="The Path to Inner Peace" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
     <h3>The Path to Inner Peace</h3>
-    <p>Dummy video placeholder for the saint’s recorded message.</p>
+    <p>Watch Swami Sadanandam Ji Maharaj's recorded message on the path to inner peace.</p>
   </div>
 </div>
 
