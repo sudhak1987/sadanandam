@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/about-SadanandMaharajJI", "destination": "/about.html" }
+  ]
+}
