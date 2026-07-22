@@ -88,9 +88,16 @@ document.querySelectorAll('.reveal').forEach(el=> observer.observe(el));
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 const videoFrame = modal.querySelector('#modalVideoFrame');
+const modalTitle = modal.querySelector('#modalTitle');
+const modalDesc = modal.querySelector('#modalDesc');
 const YOUTUBE_VIDEO_ID = 'U3qcWAJgZIE';
-document.querySelectorAll('.open-video').forEach(btn => btn.addEventListener('click', ()=>{
+const defaultModalTitle = modalTitle ? modalTitle.textContent : '';
+const defaultModalDesc = modalDesc ? modalDesc.textContent : '';
+document.querySelectorAll('.open-video').forEach(btn => btn.addEventListener('click', (e)=>{
+  e.preventDefault();
   videoFrame.src = `https://www.youtube.com/embed/${btn.dataset.yt || YOUTUBE_VIDEO_ID}?autoplay=1&rel=0`;
+  if (modalTitle) modalTitle.textContent = btn.dataset.title || defaultModalTitle;
+  if (modalDesc) modalDesc.textContent = btn.dataset.desc || defaultModalDesc;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }));
@@ -98,6 +105,8 @@ function shutModal(){
   modal.classList.remove('open');
   document.body.style.overflow = '';
   videoFrame.src = '';
+  if (modalTitle) modalTitle.textContent = defaultModalTitle;
+  if (modalDesc) modalDesc.textContent = defaultModalDesc;
 }
 closeModal.addEventListener('click', shutModal);
 modal.addEventListener('click', e => { if(e.target === modal) shutModal(); });
