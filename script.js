@@ -3,6 +3,7 @@ window.addEventListener('load', ()=> setTimeout(()=> loader.classList.add('hide'
 
 const header = document.getElementById('header');
 const mobileDonate = document.querySelector('.mobile-donate');
+const scrollTopBtn = document.getElementById('scrollTop');
 let scrollTicking = false;
 window.addEventListener('scroll', ()=>{
   if (scrollTicking) return;
@@ -10,9 +11,17 @@ window.addEventListener('scroll', ()=>{
   requestAnimationFrame(()=>{
     header.classList.toggle('scrolled', window.scrollY > 8);
     if (mobileDonate) mobileDonate.classList.toggle('hide', window.scrollY > window.innerHeight / 2);
+    if (scrollTopBtn){
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolledRatio = scrollable > 0 ? window.scrollY / scrollable : 0;
+      scrollTopBtn.classList.toggle('show', scrolledRatio >= 0.5);
+    }
     scrollTicking = false;
   });
 });
+if (scrollTopBtn){
+  scrollTopBtn.addEventListener('click', ()=> window.scrollTo({top: 0, behavior: 'smooth'}));
+}
 
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');

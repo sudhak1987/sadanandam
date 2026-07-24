@@ -1185,6 +1185,26 @@ button,input{font:inherit}
 .contact-map{margin:8px 0 48px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card)}
 .contact-map iframe{display:block;width:100%;height:320px;border:0}
 
+/* 13. scroll to top */
+.scroll-top{
+  position:fixed;
+  right:26px;bottom:26px;
+  width:46px;height:46px;
+  border:0;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(var(--gold-grad-a),var(--gold-grad-b));
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:var(--shadow-card);
+  z-index:70;
+  opacity:0;visibility:hidden;
+  transform:translateY(12px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s,filter .2s ease
+}
+.scroll-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.scroll-top:hover{filter:brightness(1.12)}
+
 /* mobile, matched to approved compact reference */
 @media(max-width:700px){
   body{padding-bottom:82px;background:#f6f1e9}
@@ -1398,6 +1418,7 @@ button,input{font:inherit}
   .mobile-donate.hide{transform:translateY(120%);opacity:0;pointer-events:none}
   .mobile-donate span{flex:1;text-align:center}
   .mobile-donate i:first-child{font-size:26px}
+  .scroll-top{right:14px;bottom:92px;width:42px;height:42px;font-size:14px}
   .row-title a{font-size:9.5px}
   .row-title>span,.label{font-size:10.5px}
   .about-banner{padding:36px 0 28px}
