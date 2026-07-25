@@ -307,7 +307,13 @@ button,input{font:inherit}
   top:100%;
   border-radius:0;
   border-left:0;border-right:0;
-  transform:translateY(-8px)
+  transform:translateY(-8px);
+  /* the Media button sits well above this full-width panel (it's positioned
+     against .header, not the nav-item), so the instant pointer-events:none
+     cutoff from the shared rule closes it before the cursor crosses the gap;
+     staying auto here and letting visibility's transition (below) gate
+     interactivity gives that crossing a grace window instead */
+  pointer-events:auto
 }
 .full-panel-inner{
   display:flex;
